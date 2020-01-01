@@ -37,9 +37,7 @@ def func(lst):
 def Find_single_show_num(lst):
     num= 0
     for i in lst:
-        # temp = num
         num ^= i
-        # print('{0} ^ {1} = {2}, num = {2}'.format(temp, i, num))
     return num
 ```
 
