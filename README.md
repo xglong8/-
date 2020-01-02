@@ -63,3 +63,42 @@ def func_3(lst):
     n = Find_single_show_num(b)
     return m, n
 ```
+
+## 2 归并排序
+### 2.1 自底向上
+```
+def Gui_bing(lst):
+    if len(lst) <= 1:
+        return lst
+
+    mid = int(len(lst) /2 )
+    left = Gui_bing(lst[:mid])
+    right = Gui_bing(lst[mid:])
+
+    return merge_list(left, right)
+
+def merge_list(left, right):
+    result = []
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
+
+    return result
+
+a = [26,5,77,1,61,11,59,15,48,19]
+
+print(Gui_bing(a))
+```
+
+### 2.2 自顶向下
+```
+
+```
+
